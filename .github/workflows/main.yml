@@ -28,7 +28,7 @@ jobs:
 
       - name: Verificar vulnerabilidades
         run: |
-            bandit -r app.py -ll
+            bandit -r function_calculos.py -ll
 
   deploy:
     runs-on: ubuntu-latest
