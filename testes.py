@@ -1,6 +1,5 @@
 import unittest
 import function_calculos as calculadora
-from app import app
 
 
 class TestesFuncoes(unittest.TestCase):
@@ -25,3 +24,4 @@ class TestesFuncoes(unittest.TestCase):
 if __name__ == "__main__":
 
     unittest.main()
+
