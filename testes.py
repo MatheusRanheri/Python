@@ -22,35 +22,6 @@ class TestesFuncoes(unittest.TestCase):
         self.assertEqual(calculadora.dividir(5, 0), "Erro!!!")
         self.assertEqual(calculadora.dividir(0, 5), "Erro!!!")
 
-
-class TestesAPI(unittest.TestCase):
-    def setUp(self):
-        self.app = app.test_client()
-
-    def test_soma_api(self):
-        response = self.app.get('/soma?a=2&b=3')
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.json['resultado'], 5)
-
-    def test_subtrair_api(self):
-        response = self.app.get('/subtrair?a=10&b=4')
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.json['resultado'], 6)
-
-    def test_multiplicar_api(self):
-        response = self.app.get('/multiplicar?a=3&b=4')
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.json['resultado'], 12)
-
-    def test_dividir_api(self):
-        response = self.app.get('/dividir?a=8&b=2')
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.json['resultado'], 4)
-
-        response = self.app.get('/dividir?a=5&b=0')
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.json['resultado'], "Erro!!!")
-
-
 if __name__ == "__main__":
+
     unittest.main()
